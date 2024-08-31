@@ -1,4 +1,7 @@
 #!/bin/bash
 
-USERNAME=omi
-PASSWORD=omi4858
+echo "Please enter ur username"
+
+read USERNAME
+
+echo "username  entered is $USERNAME"
