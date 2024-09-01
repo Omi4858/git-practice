@@ -22,3 +22,21 @@ then
         echo "Get is already installed, nothing to to"
 
     fi
+
+    dnf list installed mysql
+
+    if [ $? -ne 0 ]
+
+    then
+        echo "My sql is not installed....going to install"
+        dnf install mysql -y
+        if [ $? -ne 0 ]
+        then
+        echo "Mysql installation is failur..please check"
+        exit 1
+        else 
+        echo "Mysql installation is success"
+        fi
+        else
+        echo "Mysql is already installed..nothing to do"
+        fi
